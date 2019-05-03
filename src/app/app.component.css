@@ -1,0 +1,12 @@
+form {
+    margin-bottom: 20px;
+}
+
+table {
+    display: inline-block;
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+  }

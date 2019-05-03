@@ -6,6 +6,27 @@
     <h2>
       from the mocking source of data
     </h2>
+    <div>
+      <form>
+        <select>
+          <option>Jon Doe</option>
+          <option>Jack Daniels</option>
+          <option>Nora Roberts</option>
+        </select>
+      </form>
+    </div>  
+    <table>
+      <tr>
+        <th>Installation</th>
+        <th>Devices</th> 
+      </tr>
+      <td>
+        <tr *ngFor="let item of installationItems; let i = index">{{item}}</tr>
+      </td>
+      <td >
+        <tr *ngFor="let item of devicesItems; let i = index">{{item}}</tr>
+      </td>
+    </table>
 </div>
 
 
