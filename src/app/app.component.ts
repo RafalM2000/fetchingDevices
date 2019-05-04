@@ -30,18 +30,17 @@ export class AppComponent  {
 
 
   fetchDevices(installationId) {
-
     for (let i=0; i < this.devices.length; i++) {
       if (this.devices[i].installatinId === installationId) {
-        this.devicesItems[i] = this.devices[i].devicesId;
-        this.installationItems[i] = this.devices[i].installatinId;
+        this.devicesItems.push(this.devices[i].devicesId);
+        this.installationItems.push(this.devices[i].installatinId);
       }
     }
   }
   onChange(customer) {
-
   this.devicesItems = [];
   this.installationItems = [];
+  if ('choose' === customer) {this.installations = of();};
   if (this.customers[0] === customer) {this.installations = of('Poznań', 'Lusowo', 'Wrocław');};
   if (this.customers[1] === customer) {this.installations = of('Warszawa', 'Wrocław', 'Jelenia Góra');};
   if (this.customers[2] === customer) {this.installations = of('Poznań', 'Komorowo', 'Brzeg', 'Lusowo');}
