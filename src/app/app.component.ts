@@ -22,12 +22,10 @@ export class AppComponent  {
     {installatinId: 'Komorowo', devicesId: [13, 356, 954, 3184]},
     {installatinId: 'Warszawa', devicesId: [13, 5, 93, 7384]},
     {installatinId: 'Brzeg', devicesId: [131, 3526, 9564, 34]},
-    {installatinId: 'Wrocław', devicesId: [238, 241, 823, 273]}
-]
+    {installatinId: 'Wrocław', devicesId: [238, 241, 823, 273]}]
 
   devicesItems = [];
   installationItems = [];
-
 
   fetchDevices(installationId) {
     for (let i=0; i < this.devices.length; i++) {
@@ -49,7 +47,5 @@ export class AppComponent  {
     (instId: string) => {
       this.fetchDevices(instId);
     });
-
-}
-
+  }
 }
