@@ -8,25 +8,27 @@
     </h2>
     <div>
       <form>
-        <select>
-          <option>Jon Doe</option>
-          <option>Jack Daniels</option>
-          <option>Nora Roberts</option>
+        <select (change)="onChange($event.target.value)">
+          <option>choose</option>
+          <option *ngFor="let item of customers;">{{item}}</option>
         </select>
       </form>
     </div>  
-    <table>
-      <tr>
-        <th>Installation</th>
-        <th>Devices</th> 
-      </tr>
-      <td>
-        <tr *ngFor="let item of installationItems; let i = index">{{item}}</tr>
-      </td>
-      <td >
-        <tr *ngFor="let item of devicesItems; let i = index">{{item}}</tr>
-      </td>
-    </table>
+    <div *ngIf = "installationItems.length != 0">
+      <table>
+        <tr>
+          <th>Installation</th>
+          <th>Devices</th> 
+        </tr>
+        <td>
+          <tr *ngFor="let item of installationItems">{{item}}</tr>
+        </td>
+        <td >
+          <tr *ngFor="let item of devicesItems">{{item}}</tr>
+        </td>
+      </table>
+    </div>
+
 </div>
 
 
