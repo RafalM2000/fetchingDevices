@@ -6,14 +6,14 @@
     <h2>
       from the mocking source of data
     </h2>
-    <div>
+
       <form>
         <select (change)="onChange($event.target.value)">
           <option>choose</option>
           <option *ngFor="let item of customers;">{{item}}</option>
         </select>
       </form>
-    </div>  
+ 
     <div *ngIf = "installationItems.length != 0">
       <table>
         <tr>

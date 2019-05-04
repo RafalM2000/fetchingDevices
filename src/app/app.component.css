@@ -4,13 +4,23 @@ form {
 
 table {
     display: inline-block;
-    text-align: center;
+    text-align: left;
 }
 
-table, th, td {
-    border: 1px solid black;
+th, td {
+    border: 1px solid rgb(236, 110, 110);
+    padding: 15px;
   }
 
+td {
+    background-color: rgb(235, 217, 224);
+}
+th {
+     background-color: rgb(207, 218, 226);
+ } 
 select {
     font-size: 1.2em;
+    background-color: rgb(231, 227, 222);
+    border-radius: 5px;
+    outline: none;
 }
